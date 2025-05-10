@@ -1,5 +1,5 @@
 $outputPath = "$env:USERPROFILE\halo-next\static"
-$repoPath = "D:\gerbok\username.github.io"  # 请将 username 替换为你的 GitHub 用户名
+$repoPath = "D:\gerbok\ch777777.github.io"  # 已修改为正确的仓库路径
 
 # 1. 确保 Halo 已经在运行
 Write-Host "请确保 Halo 已经启动并运行在 http://localhost:8090" -ForegroundColor Yellow
