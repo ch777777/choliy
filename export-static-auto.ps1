@@ -12,9 +12,9 @@ try {
     # 尝试启动 Halo
     $javaHome = "D:\gerbok\jdk-17.0.2"
     $env:JAVA_HOME = $javaHome
-    $env:Path += ";$javaHome\bin"
+    $env:Path = "$env:Path;$javaHome\bin"
     
-    Start-Process -FilePath "$javaHome\bin\java.exe" -ArgumentList "-jar", "D:\gerbok\choliy\halo-app\halo-2.20.11-SNAPSHOT.jar", "--spring.config.location=file:D:\gerbok\choliy\halo-app\application.yaml" -NoNewWindow
+    Start-Process -FilePath "java" -ArgumentList "-jar", "D:\gerbok\choliy\halo-app\halo-2.20.11-SNAPSHOT.jar", "--spring.config.location=file:D:\gerbok\choliy\halo-app\application.yaml" -NoNewWindow
     
     # 等待 Halo 启动
     Write-Host "等待 Halo 启动 (最多等待 60 秒)..." -ForegroundColor Yellow
