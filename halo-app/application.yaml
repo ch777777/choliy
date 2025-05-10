@@ -34,6 +34,9 @@ halo:
       # 初始管理员角色
       master-username: admin
       master-password: admin  # 请务必修改此密码
+  # 静态部署配置
+  theme:
+    static-path: ${user.home}/halo-next/static
 
 springdoc:
   api-docs:
