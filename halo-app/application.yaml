@@ -1,0 +1,40 @@
+server:
+  port: 8090
+  compression:
+    enabled: true
+  forward-headers-strategy: native
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  sql:
+    init:
+      mode: always
+  # H2 数据库配置
+  h2:
+    console:
+      enabled: false
+  # 数据库配置
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:~/halo-next/db/halo
+    username: admin
+    password: 123456
+
+halo:
+  # 工作目录
+  work-dir: ${user.home}/halo-next/
+  # 外部访问地址
+  external-url: http://localhost:8090/
+  # 安全认证
+  security:
+    initializer:
+      # 初始管理员角色
+      master-username: admin
+      master-password: admin  # 请务必修改此密码
+
+springdoc:
+  api-docs:
+    enabled: false 
